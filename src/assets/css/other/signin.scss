@@ -1,0 +1,48 @@
+.signin{
+  width: 7.5rem;
+  height: 4.2rem;
+  background: #f7f2e4;
+  i{
+    font-size: 0.4rem;margin:0.25rem 0 0.5rem 0.25rem;width: 0.6rem;
+    height: 0.6rem;line-height: 0.6rem;text-align: center;background: white;
+    opacity: 0.6;border-radius: 50%;font-weight: bolder;
+  }
+  .str{
+    font-size: 0.3rem;color: black;text-align: center;margin-bottom: 0.65rem;
+}
+.num{
+font-size: 0.5rem;
+font-weight: bolder;
+color: #b29c76;text-align: center;
+}
+  }
+  .signin_null{
+    width: 7.5rem;
+    height: 1.3rem;
+    background: #e8e1cf;
+  }
+  .signin_signin{
+    width: 3.15rem;height: 0.7rem;font-size: 0.3rem;text-align: center;
+    line-height: 0.7rem;border-radius: 0.35rem;color: white;font-weight: bolder;
+    margin: 0.45rem 0 0.65rem 2.15rem;
+    background: #b29c76;
+  }
+  .signin_img {
+    width: 7.5rem;
+    img{
+    width: 7rem;height: 1.65rem;border-radius: 0.2rem;margin: 0.25rem auto;
+    display: block;
+  }
+  }
+  .shopping {
+    width: 7.5rem;
+
+    img {
+      width: 7rem;
+      height: 1.65rem;
+      border-radius: 0.2rem;
+      margin: 0.25rem auto;
+      display: block;
+    }
+  }
+  

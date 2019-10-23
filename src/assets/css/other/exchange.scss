@@ -1,0 +1,43 @@
+.exchange{
+  width: 7.5rem;background: white;padding-bottom:0.5rem ;
+  i {
+    font-size: 0.4rem;
+    margin: 0.25rem 0 0.65rem 0.25rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-align: center;
+    background: paleturquoise;
+    opacity: 0.6;
+    border-radius: 50%;
+    font-weight: bolder;
+  }
+  .exchange_img{
+    width: 3.7rem;height: 1.5rem;margin: 0 auto;display: block;
+  }
+  .input{
+    width: 6.8rem;height: 1.5rem;border: 0.03rem solid goldenrod;
+    border-radius: 0.1rem;margin: 0 auto;display: flex;justify-content: space-around;
+    align-items: center;
+    input{
+      width: 4.5rem;
+      height: 0.65rem;
+      border: 0.02rem solid goldenrod;border-radius: 0.1rem;outline: none;
+      font-size: 0.35rem;font-weight: bolder;color: black;padding-left: 0.15rem;
+      line-height: 0.65rem;
+    }
+     button{
+       width: 1.2rem;
+       height: 0.65rem;
+       border-radius: 0.1rem;
+       background: #ec7877;text-align: center;line-height: 0.65rem;font-size: 0.3rem;
+       color: white;font-weight: bolder;
+     }
+  }
+}
+.exchange_foot_img{
+  width: 7.5rem;
+  img{
+  width: 6.9rem;height: 2.4rem;margin: 0.35rem auto;border-radius: 0.1rem;display: block;
+}
+}

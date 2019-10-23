@@ -1,0 +1,53 @@
+.shopp_list{
+   background: white;
+   color:black;
+   padding-top:0.95rem;
+   .shopp_top {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     width: 7.5rem;
+     height: 0.95rem;
+     border-bottom: 0.02rem solid gray;
+     position: fixed;
+     background: white;
+     top: 0;
+     z-index: 10;
+
+     p {
+       font-size: 0.5rem;
+       font-weight: bolder;
+       color: black;
+     }
+
+     i {
+       font-size: 0.5rem;
+       font-weight: bolder;
+     }
+   }
+   ul {
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+
+     li {
+       width: 3.4rem;
+       height: 5rem;
+       margin: 0.15rem 0;
+
+       img {
+         width: 100%;
+         height: 4.3rem;
+         border-radius: 0.1rem;
+       }
+
+       p {
+         font-size: 0.23rem;
+         color: red;
+         font-weight: 900;
+       }
+     }
+   }
+}

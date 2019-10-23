@@ -1,0 +1,214 @@
+.hello {
+  background: #f5f5f5;
+}
+
+body {
+  padding-bottom: 1rem;
+}
+
+.swiper {
+  width: 7.5rem;
+  height: 7.5rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.nav {
+  width: 7.5rem;
+  height: 2.1rem;
+  display: block;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  position: relative;
+  background: white;
+  margin-top: -0.4rem;
+  z-index: 10;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      width: 20%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0.22rem;
+
+      img {
+        width: 0.8rem;
+        height: 0.8rem;
+        display: block;
+        margin: 0.30rem auto;
+      }
+    }
+  }
+}
+
+.kanjialist {
+  background: white;
+  margin-top: 0.2rem;
+
+  .p1 {
+    font-size: 0.25rem;
+    width: 7.5rem;
+    height: 0.95rem;
+    border-bottom: gray 0.01rem solid;
+    line-height: 0.95rem;
+    text-align: center;
+    background: white;
+  }
+
+  ul {
+    width: 7.5rem;
+    height: 7.63rem;
+    overflow: hidden;
+
+    li {
+      width: 100%;
+      height: 2.55rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 0.02rem black gray;
+
+      img {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 0.15rem;
+      }
+
+      .kanjia_right {
+        width: 4.7rem;
+        height: 2.25rem;
+
+        .kanjia_title {
+          font-size: 0.25rem;
+          margin-bottom: 0.2rem;
+        }
+
+        .kanjia_content {
+          font-size: 0.16rem;
+          margin-bottom: 0.7rem;
+        }
+
+        .kanjia_r_bottom {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+
+          p {
+            font-size: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.scroll {
+  width: 7.5rem;
+  height: 6.4rem;
+  background: white;
+  margin-top: 0.2rem;
+
+  .p1 {
+    font-size: 0.25rem;
+    width: 7.5rem;
+    height: 0.95rem;
+    border-bottom: gray 0.01rem solid;
+    line-height: 0.95rem;
+    text-align: center;
+    background: white;
+  }
+
+  .scroll_parent {
+
+    height: 5.5rem;
+    width: 7.5rem;
+    overflow: hidden;
+
+    ul {
+      height: 5.5rem;
+      width: 35rem;
+      border-radius: 0.2rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      li {
+        width: 6.4rem;
+        height: 5.5rem;
+
+        img {
+          width: 6.4rem;
+          height: 4rem;
+          border-radius: 0.2rem;
+        }
+
+        h4 {
+          font-size: 0.25rem;
+          margin: 0.22rem 0;
+          margin-left: 0.2rem;
+          width: 5rem;
+          overflow: hidden;
+          height: 0.35rem;
+        }
+
+        p {
+          font-size: 0.2rem;
+          color: gray;
+          margin-left: 0.15rem;
+          width: 5rem;
+          height: 0.3rem;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+.shop_list {
+  width: 7.5rem;
+  background: white;
+  margin-top: 0.2rem;
+
+  .p1 {
+    font-size: 0.25rem;
+    width: 7.5rem;
+    height: 0.95rem;
+    border-bottom: gray 0.01rem solid;
+    line-height: 0.95rem;
+    text-align: center;
+    background: white;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+      width: 3.4rem;
+      height: 5rem;
+      margin: 0.15rem 0;
+
+      img {
+        width: 100%;
+        height: 4.3rem;
+        border-radius: 0.1rem;
+      }
+
+      p {
+        font-size: 0.23rem;
+        color: red;
+        font-weight: 900;
+      }
+    }
+  }
+}

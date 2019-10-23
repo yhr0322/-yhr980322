@@ -1,0 +1,613 @@
+*{
+  padding: 0;margin: 0;list-style: none;
+}
+body{
+  background:#ededed;
+}
+///添加购物车抛物线动画
+#ball {
+  width: 20px;
+  height: 20px;
+  background: #5EA345;
+  border-radius: 50%;
+  position: fixed;top: 23px;left: 908px;
+  transition: left 1s ease-out,
+  top 1s ease-in;
+  img {
+    width: 20px;
+    height: 20px;
+    border-radius: 9px;
+  }
+}
+.header{
+  width: 1000px;height: 75px;background: black;display: flex;justify-content: space-around;align-items: center;
+  img{
+    width: 30px;height: 30px;border-radius: 15px;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    li{
+      font-size: 14px;
+      color: gray;
+      margin-left: 15px;
+      margin-right: 15px;
+      img {
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+      }
+      span{
+         width: 18px;
+         height: 18px;display: inline-block;background: pink;font-size: 10px;text-align: center;border-radius: 9px;
+      }
+    }
+    li:hover{
+      color:white;
+    }
+  }
+}
+.title{
+width: 900px;height: 110px;margin-left: 50px;
+.title_ula{
+  width: 900px;
+  height: 64px;
+  display: flex;align-items: center;
+  border-bottom: 1px solid gray;
+  li{
+    font-size: 10px;color:black;margin-left: 13px;
+  }
+}
+.title_ulb{
+   width: 900px;
+   height: 45px;
+   display: flex;
+   align-items: center;
+   li {
+     font-size: 10px;
+     color: black;
+     margin-left: 13px;
+   }
+}
+}
+.list_shop{
+  width: 900px;
+  display: flex;
+  background: white;
+  justify-content: space-around;
+  align-items: center;flex-wrap: wrap;margin-left:50px;border-radius:10px;
+   ul {
+     width: 25%;
+     height: 340px;
+     li{ display: flex;justify-content: space-around;align-items: center;
+       img{
+         width: 100px;height: 120px;margin-top: 20px;
+       }
+       font-size:12px;margin-top: 10px;overflow: hidden;text-align: center;
+       ol{
+        width: 25%;
+         li{
+           width: 100%;border:1px solid black;height: 20px;
+         }
+       }
+     }
+    
+   } ul:hover{
+       background:#f4f4f4;
+     }
+     p{
+       font-size: 20px;font-weight: 900;width: 900px;height: 50px;background: white;line-height: 50px;padding-left:20px; border-bottom:1px solid gray;
+     }
+ 
+}
+//购物车css
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+.car_title{
+  font-size: 15px;width: 880px;height: 45px;background: white;line-height: 45px;
+  padding-left: 20px;margin-top: 25px;margin-left: 50px;border-bottom: 1px solid gray;
+}
+.el-table{
+  margin-left: 50px
+}
+.car_footer {
+  font-size: 15px;
+  width: 900px;
+  height: 60px;
+  background: white;
+  margin-left: 50px;
+  border-bottom: 1px solid gray;
+  ul{
+    display: flex;justify-content: space-around;align-items: center;
+    .car_li1{
+      font-size: 10px;width: 450px;height: 60px;
+       p {
+         margin-top: 20px;
+       }
+    }
+    .car_li2 {
+      font-size: 13px;
+      width: 125px;
+      height: 60px;
+      p{
+        margin-top: 7px;
+      }
+    }
+    .car_li3 {
+      font-size: 13px;
+      width: 125px;
+      height: 60px;
+       p {
+         margin-top: 7px;
+       }
+    }
+    .car_li4 {
+      font-size: 20px;
+      width:100px;
+      height: 60px;
+      button{
+        width: 100px;
+        height: 35px;
+        border-radius: 5px;
+        background:#6086e7;
+        line-height: 35px;
+        text-align: center;font-weight: 900;color: white;margin-top: 12px;
+      }
+    }
+
+  }
+}
+//商品详情页css
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+.detail{
+  width: 900px;height: 450px;background: white;border-radius: 20px;
+  display: flex;justify-content: space-around;align-items: center;margin-left: 50px;
+  .detail_ul{
+    width: 150px;height: 438px;padding-top:12px;
+    li{
+      width: 60px;height: 60px;margin-top:20px;margin-left:70px;border: gray 1px solid;
+      img{
+        width:100%;
+        height: 100%;
+      }
+    }
+    li:hover{
+      border: #6086e7 3px solid;
+    }
+  }
+  .img1{
+     width: 380px;
+     height: 380px;
+    //  border: #6086e7 3px solid;
+  }
+}
+.detail_data{
+  .det_li1{
+    font-size: 19px;
+  }
+  .det_li2{
+    font-size: 10px;color:gray;margin: 10px 0;
+  }
+  .det_li3 {
+    font-size: 14px;
+    color: gray;
+    margin: 15px 0;
+    span{
+       width: 25px;
+       height: 25px;
+       margin-left: 15px;
+       border-radius: 13px;
+       border: gray 1px solid;
+       background: #a8394c;
+      display: inline-block;
+    } 
+    span:nth-child(2){
+      background: black;
+    }
+    span:nth-child(3) {
+      background: #4e2d26;
+    }
+    span:nth-child(4) {
+      background: #e5ded6;
+    }
+  }
+  .det_li4 {
+    font-size: 14px;
+    color: gray;
+    margin: 15px 0;
+    button{
+      width: 22px;height: 22px;margin-left: 15px;border-radius: 10px;
+      border: gray 1px solid;background: white;outline: none;
+    }
+    span{
+      margin-left: 15px;
+    }
+   
+  }
+  .det_li5 {
+    margin: 15px 0;
+    button{
+      width: 110px;height: 40px;font-size: 16px;border-radius: 5px;line-height: 40px;
+      text-align: center;color: gray;
+    }
+    button:hover{
+      background: #6086e7;color:white;
+    }
+  }
+  hr{
+    margin: 23px 0;
+  }
+}
+//APP页部分css
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+body{
+  position: relative;
+}
+.car_border{
+  font-size: 8px;color:gray;position: absolute;top: 60px;left:770px;padding: 15px;background: white;
+   width: 200px;text-align: center;
+}
+//用户页css
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+.user_all{
+   width: 900px;
+   display: flex;
+   justify-content: space-around;
+   margin-left: 50px;
+   .user_user{
+     width: 160px;height: 225px;border-radius: 10px;background:white;
+     img{
+       width: 125px;height: 125px;margin: 10px auto;margin-left: 17px;
+     }
+     p{
+       font-size: 11px;text-align: center;line-height: 38px;border-top: gray 1px solid;
+     }
+    
+   }
+   .user_new{
+     width: 730px;border-radius:10px;
+     .top{
+        width: 730px;
+        background: #f4f4f4;
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+          font-size: 15px;color: gray;margin-left: 25px;
+        }
+        button{
+          width: 90px;height: 30px;border-radius: 5px;background: gray;line-height: 30px;
+          text-align: center;font-size: 10px;font-weight: 900;color: white;margin-right: 25px;
+        }
+     }
+     .bottom{
+        width: 730px;
+        height: 80px;
+        border-bottom: 1px solid gray;
+        display: flex;background: white;
+        justify-content: space-between;
+        align-items: center;
+        .bot_p1{
+          width: 100px;font-size: 11px;color:gray;
+        }
+        .bot_p2 {
+          width: 375px;
+          font-size: 11px;
+          color:gray;
+        }
+        .bot_p3 {
+          width: 90px;
+          font-size: 11px;
+          color: gray;
+        }
+        .bot_p4 {
+          width: 75px;
+          font-size: 11px;
+          color: gray;
+        }
+        .bot_p5 {
+          width: 70px;
+          font-size: 11px;
+          color: gray;
+          button{
+            width: 30px;height: 30px;font-size: 10px;line-height: 30px;text-align: center;
+          }
+        }
+     }
+   }
+}
+.add{
+ position: absolute;top: 200px;left:300px;width: 400px;
+ height: 520px;background: white;border: 1px solid block;
+ p{
+   width: 100%;height: 55px;font-size: 16px;font-weight: 800;line-height: 55px;text-align: center;
+ }
+ li{
+   width: 80%;height: 45px;margin: 20px auto;display: flex;justify-content: space-around;
+   align-items: center;
+   input{
+     width: 100%;height: 100%;border-radius: 8px;font-size: 18px;color: gray;
+   }
+   select{
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      font-size: 18px;
+      color: gray;
+   }
+   button{
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      font-size: 18px;
+      color: white;
+      background: #6086e7;line-height: 45px;text-align: center;font-weight: 900;
+   }
+ }
+ .add_li6{
+   display: block;
+   width: 80%;
+   height: 20px;
+   margin: 15px auto;
+   input{
+     width: 16px;height: 16px;border-radius: 8px;background: #6086e7;color:white;
+   }
+ }
+}
+//最后的结算页面css
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+.end_new{
+  width: 900px;background: white;border-radius: 10px;margin-left: 50px;
+  .p11{
+    font-size: 15px;width: 870px;height: 45px;line-height: 45px;
+    padding-left: 30px;
+    font-weight: 700;
+    background: #f4f4f4;
+    border-radius: 10px;
+  }
+  ul{
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     .end_ulli1 {
+          width: 205px;
+          height: 120px;
+          border: 1px solid gray;
+          margin: 20px 15px;
+          background: #f4f4f4;
+          overflow: scroll;
+          .p1{
+            font-size: 15px;font-weight: 600;margin-left: 15px;margin-top: 10px;
+          }
+          .p2 {
+            font-size: 10px;
+            color:gray;
+            margin-left: 15px;
+            margin-top: 10px;
+          }
+     }
+     .end_ulli2{
+        width: 205px;
+        height: 120px;
+        border: 1px solid gray;
+        margin: 20px 15px;font-size: 20px;font-weight: 900;background: #f4f4f4;
+        line-height: 120px;text-align: center;
+     }
+  }
+}
+.end_fapiao{
+  width: 900px;
+  background: white;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top:20px;
+   .p11 {
+     font-size: 15px;
+     width: 870px;
+     height: 45px;
+     line-height: 45px;
+     padding-left: 30px;
+     font-weight: 700;
+     background: #f4f4f4;
+     border-radius: 10px;
+   }
+   ul{
+     width: 100%;
+     li{
+       font-size: 12px;margin: 15px 0;width: 100%;height: 20px;
+       line-height: 20px;margin-left: 20px;
+     }
+     .fapiao_li{
+       font-size: 11px;
+       line-height: 30px;
+       width: 100%;
+       margin-left: 20px;
+       color:gray;
+       height: 30px;
+     }
+   }
+}
+.end_car{
+  width: 900px;
+  background: white;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top:20px;
+  .p11 {
+    font-size: 15px;
+    width: 870px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 30px;
+    font-weight: 700;
+    background: #f4f4f4;
+    border-radius: 10px;
+  }
+  .el-table {
+    margin-left: 0px
+  }
+  .end_price{
+    width: 900px;height: 70px;border-bottom: 1px solid gray;
+    text-align: right;
+    P{
+      font-size: 15px;
+      span{
+        display: inline-block;margin-left: 60px;margin-right: 60px;
+       
+      }
+    }
+  }
+  .end_button{
+     width: 900px;
+     height: 70px;
+     border-bottom: 1px solid gray;
+     text-align: right;align-items:center;
+     .span1{
+         font-size: 12px;color: gray;
+     }
+     .span2{
+       font-size: 17px;color: red;font-weight: 900;margin-left: 20px;
+     }
+     button{
+       width: 100px;height: 35px;border-radius: 5px;background: #6086e7;line-height: 35px;
+       text-align: center;
+       color: white;
+       margin-left: 60px;
+       margin-right: 60px;margin-top: 17px;
+     }
+  }
+}
+//最后的结算后面的支付页面css
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+.last_top{
+  width: 900px;
+  background: white;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top:20px;
+  .p11 {
+    font-size: 15px;
+    width: 870px;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 30px;
+    font-weight: 700;
+    background: #f4f4f4;
+    border-radius: 10px;
+  }
+  ul{
+    width: 900px;height: 150px;background: white;text-align: center;
+    .last_li1{
+      font-size: 27px;font-weight: 900;margin-top: 40px;color: black;
+    }
+    li{
+      font-size: 11px;color: gray;margin-top: 10px;
+    }
+
+  }
+  .last_button {
+    width: 900px;
+    height: 70px;
+    text-align: right;
+    align-items: center;
+background: #f4f4f4;
+    .span1 {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .span2 {
+      font-size: 17px;
+      color: red;
+      font-weight: 900;
+      margin-left: 20px;
+    }
+
+    button {
+      width: 100px;
+      height: 35px;
+      border-radius: 5px;
+      background: #6086e7;
+      line-height: 35px;
+      text-align: center;
+      color: white;
+      margin-left: 60px;
+      margin-right: 60px;
+      margin-top: 17px;
+    }
+  }
+}
+.last_list{
+    width: 900px;
+    background: white;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top:20px;
+    li{
+      width: 870px;padding: 15px;border-bottom:1px solid gray;
+      h4{
+        font-size: 15px;margin: 10px 0;
+      }
+      p{
+        font-size: 11px;color: gray;margin: 5px 0;
+      }
+    }
+}
+.end_price {
+  width: 900px;
+  height: 70px;
+  border-bottom: 1px solid gray;
+  text-align: right;
+
+background: white;
+  P {
+    font-size: 15px;
+   padding-top: 15px;
+
+    span {
+      display: inline-block;
+      margin-left: 60px;
+      margin-right: 60px;
+
+    }
+  }
+}
+//我的订单页
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+table{
+   width: 730px;
+   border-bottom: 1px solid gray;text-align: left;
+   background: white;font-size:10px; color: gray;
+   th{
+     height: 35px;
+   }
+}
