@@ -13,31 +13,31 @@ const store = new Vuex.Store({
     bbbb_list: [],//分类请求回来的数据存放
     bbbb_lista: [],//分类里边的一级分类
     bbbb_listb: [],//分类里边的二级分类
+    login_phone:''//登录成功时用户名
      
   },
   mutations: {
+    sub (state,phone) {
+state.login_phone=phone
+    },
     filter_list (state, item) {
-   
       let itemb = item.type + 2
-      console.log(itemb)
       state.bbbb_listb = state.bbbb_list.filter((itema) => {
         if (itemb == itema.type) {
-          
+          return itema
         }
       })
+    },
+    filter_all (state) {
+      state.bbbb_listb = state.bbbb_list
     }
   },
   getters: {
-    
   }
 })
 const app = new Vue({
   store,
   created () {
-    //首页轮播图的axios数据请求
-    // axios.get("https://api.it120.cc/small4/banner/list").then((res) => {
-    //   store.state.list = res.data.data
-    // })
 
     //首页砍价的商品数据请求
      axios.get("https://api.it120.cc/small4/shop/goods/kanjia/list").then((res) => {
@@ -54,12 +54,7 @@ const app = new Vue({
        store.state.shop_list = res.data.data
        store.state.shopa_list = store.state.shop_list.splice(0, 4)
      })
-    //路由跳转到签到页面的数据
-    // axios.get("https://api.it120.cc/small4/score/sign/rules").then((res) => {
-    //   store.state.signing_list = res.data
-     
-    //   console.log(store.state.signing_list)
-    // })
+   
   },
 })
 export default store

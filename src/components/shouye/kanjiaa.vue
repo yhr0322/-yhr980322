@@ -4,7 +4,9 @@
    <router-link to="/kanjiab"><p class="p1">全名砍价 > </p></router-link>
    <ul>
    <li v-for="(item,index) in kanjialist">
+   <router-link :to="'/f_det_det/'+item.id">
    <img :src="item.pic" alt="">
+   </router-link>
    <div class="kanjia_right">
    <p class="kanjia_title">{{item.name}}</p>
    <p class="kanjia_content">{{item.characteristic}}</p> 
@@ -14,6 +16,7 @@
    <p>{{item.stores}} <br> 限量</p>
    </div>
    </div>
+   
    </li>
    </ul>
    </div>

@@ -28,6 +28,43 @@ class Product {
       }
     })
   }
+
+   f_det_list(productId) {
+     return _http.request({
+       url: `shop/goods/list?id=${productId}`,
+       
+     })
+  }
+  
+  f_det_det(productId) {
+    return _http.request({
+      url: `shop/goods/detail?id=${productId}`,
+
+    })
+  }
+
+  login_sub (str) {
+    return _http.request({
+      type: 'post',
+      url: 'user/m/login?deviceId=007&deviceName=monkey',
+      data: {
+        mobile: str.phone,
+        pwd:str.password,
+      }
+    })
+  }
+
+
+  reg_num(reg_num) {
+    return _http.request({
+      type: 'post',
+      url: 'verification/pic/get',
+      data: {
+       key: reg_num,
+       
+      }
+    })
+  }
 }
 
 export default Product

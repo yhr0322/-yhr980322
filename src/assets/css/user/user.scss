@@ -1,0 +1,131 @@
+.user_all{
+  width: 7.5rem;background: #f5f5f5;
+  //top
+  ////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////
+  .user_top{
+    width: 7.5rem;
+    height: 3.45rem;
+    background: #c9ba99;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    i{
+      font-size: 1.07rem;width: 1.5rem;height: 1.5rem;border-radius: 0.75rem;
+      background: white;opacity: 0.8;text-align: center;line-height: 1.5rem;
+    }
+    .user_left{
+      width: 5rem;height: 1.5rem;
+      p{
+        font-size: 0.3rem ;color: white;margin-top: 0.2rem;margin-bottom: 0.2rem;
+      }
+     span{
+       width: 1.5rem;
+       height: 0.5rem;
+       background: #b3a078;
+       border-radius: 0.08rem;font-size: 0.15rem;color: white;
+       line-height: 0.5rem;display: block;padding-left: 0.1rem;margin-bottom: 0.3rem;
+     }
+    }
+  } 
+  //消息
+  /////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////
+.user_msg{
+  width: 7.5rem;
+  height: 0.8rem;
+  background: white;
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  i{
+   font-size:0.3rem;color: orange;margin-left: 0.3rem;
+  }
+  span{
+    font-size: 0.2rem;color: red;margin-left: 0.2rem;
+  }
+}
+//order
+/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+.user_order{
+  width: 7.5rem;height: 1rem;background: white;border-bottom: 0.01rem solid gray;
+  display: flex;justify-content: space-between;align-items: center;
+  .u_my_order{
+    display: flex;align-items:center;margin-left:0.4rem;
+i{
+  font-size: 0.38rem;color: orange;
+}
+span{
+   font-size: 0.2rem;display: inline;margin-left: -0.4rem;
+}
+  }
+  i{
+    font-size: 0.38rem;margin-right: 0.4rem;
+  }
+}
+//nav
+/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+.user_nav{
+  width: 7.5rem;height: 1.4rem;background: white;margin-bottom: 0.3rem;
+  ul{
+    width: 100%;height: 100%;display: flex;justify-content: space-around;align-items: center;
+    li{
+      width: 25%;height: 100%; text-align: center;font-size:0.2rem; 
+      i{
+        font-size: 0.5rem;color: gray;margin: 0.2rem auto;display: block;
+      }
+    }
+  }
+}
+//some_nav
+/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+.u_s_nav{
+  width: 7.5rem;height: 3.3rem;background: white;
+  ul{
+    width: 100%;height: 100%;display: flex;justify-content: space-around;
+    align-items: center;flex-wrap:wrap;
+    li {
+      width: 33%;
+      height: 50%;
+      text-align: center;
+      font-size: 0.2rem;
+
+      i {
+        font-size: 0.5rem;
+        color: gray;
+        margin: 0.3rem auto;
+        display: block;
+      }
+     
+    }
+     li:nth-of-type(1) i {
+       color: orange;
+     }
+      li:nth-of-type(2) i {
+        color: orange;
+      }
+       li:nth-of-type(3) i {
+         color: orangered
+       }
+        li:nth-of-type(4) i {
+          color: orangered;
+        }
+         li:nth-of-type(5) i {
+           color: blue;
+         }
+          li:nth-of-type(6) i {
+            color: blue;
+          }
+  }
+}
+
+
+}

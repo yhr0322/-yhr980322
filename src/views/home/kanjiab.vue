@@ -7,9 +7,8 @@
     <router-link to="/kanjiab" tag="p"><p class="p1">砍价列表</p></router-link>
     <p></p>
     </div>
-   
    <ul>
-   <router-link  v-for="(item,index) in kanjialist" :to="{ path:'/kanjiadetail',query:{id:item.id}}">
+   <router-link  v-for="(item,index) in kanjialist" :key="index" :to="{ path:'/kanjiadetail',query:{id:item.id}}">
    <li style="border-bottom:0.01rem solid black;">
    <img :src="item.pic" alt="">
    <div class="kanjiab_right">

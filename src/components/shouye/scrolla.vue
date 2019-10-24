@@ -8,6 +8,7 @@
    <img :src="item.pic" alt="">
    <h4>{{item.title}}</h4>
    <p>{{item.descript}}</p>
+   
    </li>
    </ul>
    </div>
