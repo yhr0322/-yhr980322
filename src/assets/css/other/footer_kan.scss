@@ -1,0 +1,14 @@
+.footer_kan{
+   width: 7.5rem;
+   height: 1rem;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   position: fixed;
+   bottom: 0;
+   background: red;
+   z-index: 10;
+   p{
+     text-align: center;font-size: 0.4rem;line-height: 1rem;color: white;
+   }
+}

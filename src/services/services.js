@@ -43,6 +43,13 @@ class Product {
     })
   }
 
+   special_all(id) {
+     return _http.request({
+       url: `cms/news/detail?id=${id}`,
+
+     })
+   }
+
   login_sub (str) {
     return _http.request({
       type: 'post',
@@ -65,6 +72,60 @@ class Product {
       }
     })
   }
+
+
+  update_img(obj_up) {
+    return _http.request({
+      type: 'post',
+      url: 'verification/sms/get',
+      data: {
+        mobile: obj_up.phone,
+          key: obj_up.time,
+          picCode: obj_up.pic_up
+
+      }
+    })
+  }
+
+
+sub_img(obj) {
+  return _http.request({
+    type: 'post',
+    url: 'verification/sms/get',
+    data: {
+      mobile: obj.phone,
+      key: obj.time,
+      picCode: obj.pic_str
+
+    }
+  })
+}
+
+
+  register_sub(obj_num) {
+    return _http.request({
+      type: 'post',
+      url: 'user/m/register',
+      data: {
+        mobile: obj_num.phone,
+       code:obj_num.code,
+         pwd: obj_num.rpassword
+      }
+    })
+  }
+ update_sub(obj_update) {
+   return _http.request({
+     type: 'post',
+     url: 'user/m/reset-pwd',
+     data: {
+       mobile: obj_update.phone,
+       code: obj_update.code,
+       pwd: obj_update.pwd
+     }
+   })
+ }
+
+
 }
 
 export default Product

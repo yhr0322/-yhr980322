@@ -1,0 +1,138 @@
+.update_all{
+  width: 7.5rem;
+  background: white;
+   h4 {
+     font-size: 0.5rem;
+     color: black;
+     margin-left: 0.7rem;
+     margin-top: 0.8rem;
+     margin-bottom: 0.8rem;
+     font-weight: 300;
+   }
+.update_phone{
+   width: 6rem;
+   margin: 0 auto;
+   height: 1.05rem;
+   border-radius: 0.1rem;
+   background: #f5f5f5;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   border: none;
+   margin-bottom: 0.35rem;
+    input {
+      width: 4.8rem;
+      height: 0.8rem;
+      font-size: 0.4rem;
+      color: gray;
+      line-height: 0.8rem;
+      background: #f5f5f5;
+      border: none;
+    }
+
+    i {
+      font-size: 0.45rem;
+      color: gray;
+    }
+}
+.update_pas{
+   width: 6rem;
+   height: 1.05rem;
+   margin: 0 auto;
+   border-radius: 0.1rem;
+   background: #f5f5f5;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   border: none;
+   margin-bottom: 0.35rem;
+
+   input {
+     width: 4.8rem;
+     height: 0.8rem;
+     font-size: 0.4rem;
+     color: gray;
+     line-height: 0.8rem;
+     background: #f5f5f5;
+     border: none;
+   }
+
+   i {
+     font-size: 0.45rem;
+     color: gray;
+   }
+}
+.update_img{
+  width: 6rem;
+  height: 1.05rem;
+  margin: 0 auto;
+  border-radius: 0.1rem;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: none;
+  margin-bottom: 0.35rem;
+
+  input {
+    width: 3rem;
+    height: 0.8rem;
+    font-size: 0.4rem;
+    color: gray;
+    line-height: 0.8rem;
+    background: #f5f5f5;
+    border: none;
+  }
+
+  img {
+    width: 3rem;
+    height: 1.05rem;
+  }
+}
+.update_yz{
+  width: 6rem;
+  height: 1.05rem;
+  margin: 0 auto;
+  border-radius: 0.1rem;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: none;
+  margin-bottom: 0.35rem;
+
+  input {
+    width: 3rem;
+    height: 0.8rem;
+    font-size: 0.4rem;
+    color: gray;
+    line-height: 0.8rem;
+    background: #f5f5f5;
+    border: none;
+  }
+
+  button {
+    width: 3rem;
+    height: 1.05rem;
+    line-height: 1.05rem;
+    text-align: center;
+    font-size: 0.3rem;
+    color: black;
+  }
+}
+.update_but{
+  width: 4.6rem;
+  height: 0.9rem;
+  background: #9792f6;
+  border-radius: 0.1rem;
+  text-align: center;
+  line-height: 0.9rem;
+  font-size: 0.32rem;
+  color: white;
+  margin: 0.5rem auto;
+  display: block;
+}
+
+
+
+}

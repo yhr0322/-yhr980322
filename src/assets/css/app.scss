@@ -2,8 +2,11 @@
 @import "other/appcss";
 @import "other/shouye";
 @import "other/kanjiab";
+@import "other/footera";
+@import "other/footer_kan";
 @import "other/signin";
 @import "other/exchange";
+@import "other/special_det";
 @import "other/special";
 @import "other/shopp";
 @import "fen/aaaa";
@@ -13,6 +16,8 @@
 @import "user/user";
 @import "user/login";
 @import "user/register";
+@import "user/updeta_pass";
+@import "car/footer_car";
 
 *{
   padding: 0;margin: 0;list-style: none;

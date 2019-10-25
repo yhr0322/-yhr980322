@@ -13,11 +13,26 @@ const store = new Vuex.Store({
     bbbb_list: [],//分类请求回来的数据存放
     bbbb_lista: [],//分类里边的一级分类
     bbbb_listb: [],//分类里边的二级分类
-    login_phone:''//登录成功时用户名
-     
+    login_phone:'',//登录成功时用户名
+    f_det_det_str: [],//具体到某一条的详情页的数据
+     car_num:1,//footer_car小购物车的数量
   },
   mutations: {
-    sub (state,phone) {
+    //购物车弹出框内数量的增加
+    foot_add (state) { 
+   state.car_num++
+    },
+    //购物车弹出框内数量的减少
+    foot_jian (state) {
+      if (state.car_num>1) {
+         state.car_num--
+      } else {
+        alert("已经是最少了！！！")
+      }
+     
+    },
+    
+        sub (state, phone) {
 state.login_phone=phone
     },
     filter_list (state, item) {
@@ -47,6 +62,7 @@ const app = new Vue({
     //首页专题滑动商品的数据
      axios.get("https://api.it120.cc/small4/cms/news/list").then((res) => {
        store.state.scrolllist = res.data.data
+       
        
      })
     //首页下方商品列表的数据

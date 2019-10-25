@@ -22,15 +22,19 @@
    </div>
 <div id="fdd_content" v-html="f_det_det.content"></div>
    
-   
+   <footer_car></footer_car>
   
   </div>
 </template>
 <script>
 import Product from '../../services/services'
 const _product = new Product()
+import footer_car from "../../components/shouye/footer_car.vue"
 export default {
   name: 'f_det_det',
+  components:{
+footer_car
+  },
   data() {
     return {
       f_det_det:[]
@@ -40,22 +44,16 @@ export default {
     gobacka(){
        this.$router.go(-1)
     }
-       
   },
   created () {
     // pending - 等待
     let id=this.$route.params.id
-       console.log(id)
     _product.f_det_det(id).then(res => {
       this.f_det_det = res.data.data
       console.log(this.f_det_det)
-    // this.f_det_list.filter((item)=>{
-    //   if(item.categoryId==id){
-    //     this.f_det_lista.push(item)
-    //   }
-    // })
+      this.$store.state.f_det_det_str=this.f_det_det
      })
-       console.log( this.f_det_lista)
+     
   }
 } 
 </script>

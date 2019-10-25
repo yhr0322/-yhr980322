@@ -40,16 +40,18 @@
     </ul>
      
      </div>
-
-
-
-
      </div>
+     <footera></footera>
   </div>
 </template>
 <script>
+import footera from "../../components/shouye/footera.vue"
 export default {
   name: 'user',
+components:{
+    footera
+  },
+
   data() {
     return {
       login_phonea:'点我登录'

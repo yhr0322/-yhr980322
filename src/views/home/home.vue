@@ -6,6 +6,7 @@
    <Kanjiaa></Kanjiaa>
    <Scrolla></Scrolla>
    <Lista :shopa_list="shopa_list"></Lista>
+   <footera></footera>
   </div>
 </template>
 <script>
@@ -16,6 +17,8 @@ import Nava from "../../components/shouye/nava.vue"
 import Kanjiaa from "../../components/shouye/kanjiaa.vue"
 import Scrolla from "../../components/shouye/scrolla.vue"
 import Lista from "../../components/shouye/lista.vue"
+import footera from "../../components/shouye/footera.vue"
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -25,7 +28,7 @@ export default {
     }
   },
   components:{
-   Titlea,Swipera,Nava,Kanjiaa,Scrolla,Lista
+   Titlea,Swipera,Nava,Kanjiaa,Scrolla,Lista,footera
   },
   mounted() {
     window.addEventListener("scroll",this.homeshowf)

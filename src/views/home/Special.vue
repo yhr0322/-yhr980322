@@ -11,7 +11,7 @@
     <img :src="item.pic" alt="">
     <h4>{{item.title}}</h4>
     <span>{{item.descript}}</span>
-    <p>查看详情</p>
+    <router-link :to="'/special_det/'+item.id" tag="p">查看详情</router-link>
     </li>
     </ul>
     </div>

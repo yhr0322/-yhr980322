@@ -8,7 +8,7 @@
     <p></p>
     </div>
    <ul>
-   <router-link  v-for="(item,index) in kanjialist" :key="index" :to="{ path:'/kanjiadetail',query:{id:item.id}}">
+   <router-link  v-for="(item,index) in kanjialist" :key="index" :to="'/kanjiadetail/'+item.id">
    <li style="border-bottom:0.01rem solid black;">
    <img :src="item.pic" alt="">
    <div class="kanjiab_right">

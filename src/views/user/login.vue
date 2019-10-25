@@ -17,7 +17,7 @@
  <van-icon name="closed-eye" @click="toogleb" />
      </div>
     <button @click="sub">登录</button>
-    <router-link tag="span" to="/">忘记密码</router-link>
+    <router-link tag="span" to="/update_pass">忘记密码</router-link>
     <router-link tag="h4" to="/register">还没有注册？立即注册</router-link>
   
   

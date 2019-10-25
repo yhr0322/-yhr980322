@@ -29,13 +29,13 @@
     </div>
     <div class="register_img">
  <input type="text" placeholder="图形验证" v-model="pic_str">
- <img src="https://api.it120.cc/small4/verification/pic/get" alt="">
+ <img :src="`https://api.it120.cc/small4/verification/pic/get?key=${this.time}`" alt="" @click="toogle_src" ref="ref">
     </div>
  <div class="register_yz">
- <input type="text" placeholder="验证码">
- <button>获取验证码</button>
+ <input type="text" placeholder="验证码" v-model="reg_numcode">
+ <button @click="sub_img">获取验证码</button>
     </div>
-    <button class="reg_but">立即注册</button>
+    <button class="reg_but" @click="register_sub">立即注册</button>
 
  <router-link to="/login"><p class="reg_login">已有账号，立即登录</p></router-link>
 
@@ -51,12 +51,13 @@ export default {
   name: 'register',
   created() {
     let reg_num=new Date().getTime()
-    console.log(reg_num)
-    _product.reg_num(reg_num).then(res => {
+    this.time=reg_num
+    // // console.log(reg_num)
+    // _product.reg_num(reg_num).then(res => {
      
-      console.log(res)
+    //   // console.log(res)
      
-    })
+    // })
   },
   data() {
     return {
@@ -65,7 +66,11 @@ export default {
       ruser:'',
         showa:true,
         showb:true,
-        pic_str:''
+        pic_str:'',
+        time:'',
+        reg_numcode:''
+       
+
     }
   },
   methods: {
@@ -81,6 +86,39 @@ export default {
      toogled(){
       this.showb=true
     },
+    sub_img(){
+      let obj={
+        pic_str:this.pic_str,
+        time:this.time,
+        phone:this.rphone
+      }
+        _product.sub_img(obj).then(res => {
+     
+      console.log(res)
+     
+    })
+    },
+    toogle_src(){
+      let timea=new Date().getTime()
+      this.time=timea
+this.$refs.ref.src="`https://api.it120.cc/small4/verification/pic/get?key=${this.time}`"
+      
+    },
+  register_sub(){
+      let obj_num={
+        phone:this.rphone,
+       rpassword:this.rpassword,
+        code:this.reg_numcode
+  
+      }
+      
+        _product.register_sub(obj_num).then(res => {
+     
+      console.log(res)
+     
+    })
+  }
+
   },
 } 
 </script>
