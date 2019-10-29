@@ -9,11 +9,11 @@
  <van-icon name="phone-circle-o" />
     </div>
      <div class="login_pas" v-show="show">
- <input type="text" placeholder="密码" v-model="password">
+ <input type="text" placeholder="密码" v-model="passworda">
  <van-icon name="eye-o"  @click="tooglea" />
   </div>
   <div class="login_pas" v-show="!show">
- <input type="password" placeholder="密码" v-model="password">
+ <input type="password" placeholder="密码" v-model="passworda">
  <van-icon name="closed-eye" @click="toogleb" />
      </div>
     <button @click="sub">登录</button>
@@ -33,8 +33,8 @@ export default {
   data() {
     return {
     
-         phone:'',
-      password:"",
+         phone:'16619974707',
+         passworda:"123123",
      
      
       show:true
@@ -50,11 +50,13 @@ export default {
     sub(){
       let str={
         phone:this.phone,
-        password:this.password
+        passworda:this.passworda
       }
        _product.login_sub(str).then(res => {
      if(res.data.code==0){
-       alert("登录成功")
+       this.$store.state.token=res.data.data.token
+        alert("登录成功")
+      
         this.$store.commit("sub",this.phone)
        this.$router.push("/user")
      }else if(res.data.code==500){

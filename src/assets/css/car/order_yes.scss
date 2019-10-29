@@ -1,0 +1,51 @@
+.order_yes_all{
+  width: 7.5rem;background: white;padding-top:0.95rem;
+  .order_yes_top{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     width: 7.5rem;
+     height: 0.95rem;
+     border-bottom: 0.1rem solid #f4f4f4;
+     position: fixed;
+     background: white;
+     top: 0;
+  }
+  p {
+    font-size: 0.4rem;
+    font-weight: bolder;
+    color: black;
+  }
+
+  .p1 {
+    font-size: 0.3rem;
+    font-weight: 800;
+    color: black;
+  }
+.order_c_top{
+  width: 7.5rem;
+  height: 1.8rem;
+  border-bottom: 0.1rem solid #f4f4f4;
+  display:flex;
+  align-items: center;justify-content: space-around;
+  i{
+    font-size: 0.5rem;color: orange;
+  }
+ 
+  div{
+    width: 6rem;height: 1rem;
+    h4{
+      font-size: 0.25rem;color: black;font-weight: 700;margin-bottom: 0.4rem;
+    }
+    p{
+     font-size: 0.17rem;color: gray;
+    }
+  }
+}
+button{
+  width: 7.5rem;height: 1rem;background: red;
+  line-height: 1rem;text-align: center;color: white;
+  font-size: 0.3rem;position: fixed;
+  bottom: 0rem;border: none;
+}
+}

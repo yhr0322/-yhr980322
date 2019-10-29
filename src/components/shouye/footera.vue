@@ -17,12 +17,19 @@
      <i class="el-icon-user"></i>
      用户
      </router-link>
+      <p class="car_all_num">{{car_all_num}}</p>
      </ul>
+    
   </div>
 </template>
 <script>
 export default {
-  name: 'footera'
+  name: 'footera',
+  computed: {
+    car_all_num(){
+      return this.$store.getters.car_all_num
+    }
+  },
 } 
 </script>
 <style>

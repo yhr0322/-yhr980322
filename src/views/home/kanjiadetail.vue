@@ -14,8 +14,8 @@
    <p class="fdd_name">{{f_det_det.basicInfo.characteristic}}</p>
    <div  class="fdd_price">
    <p>
-   <span class="fdd_minprice">底价：￥{{f_det_det.basicInfo.minPrice}}.00</span>&nbsp;&nbsp;&nbsp;
-   <span class="fdd_originalPrice">原价：￥{{f_det_det.basicInfo.originalPrice}}.00</span>
+   <span class="fdd_minprice">底价：￥{{f_det_det.basicInfo.minPrice}}</span>&nbsp;&nbsp;&nbsp;
+   <span class="fdd_originalPrice">原价：￥{{f_det_det.basicInfo.originalPrice}}</span>
    </p>
    <p>库存：{{f_det_det.basicInfo.stores}}</p>
    </div>

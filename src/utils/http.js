@@ -5,7 +5,7 @@ import Qs from 'qs'
 class HTTP {
   // HTTP下面的方法
   request(params) {
-    // console.log(params)
+     console.log(params)
     return new Promise((resolve, reject) => {
       Axios({
         method: params.type || 'get',

@@ -56,7 +56,7 @@ class Product {
       url: 'user/m/login?deviceId=007&deviceName=monkey',
       data: {
         mobile: str.phone,
-        pwd:str.password,
+        pwd:str.passworda,
       }
     })
   }
@@ -123,9 +123,129 @@ sub_img(obj) {
        pwd: obj_update.pwd
      }
    })
- }
-
-
+  }
+  //地址---省份
+ address_list() {
+   return _http.request({
+     type: 'post',
+     url: 'user/m/login?deviceId=007&deviceName=monkey',
+    
+   })
+  }
+  ////添加地址接口
+   addressa_list_user(str) {
+     return _http.request({
+       type: 'post',
+       url: 'user/shipping-address/add',
+       data: {
+         address: str.addressab.address_det,
+         cityId: str.addressab.ida,
+         code: str.addressab.number_add,
+         linkMan: str.addressab.user,
+         mobile: str.addressab.phone,
+         provinceId: str.addressab.id,
+         token: str.token,
+         checked:str.checked,
+       }
+     })
+  }
+   ////显示地址列表接口
+   addressa_list_list(str) {
+     return _http.request({
+       type: 'post',
+       url: 'user/shipping-address/list',
+       data: {
+        token:str
+       }
+     })
+  }
+    ////删除地址列表接口
+    det_addressa_list(str,num) {
+      return _http.request({
+        type: 'post',
+        url: 'user/shipping-address/delete',
+        data: {
+          token: str,
+          id:num,
+        }
+      })
+  }
+  //修改地址列表接口
+   up_addressa_list(str, num) {
+     return _http.request({
+       type: 'post',
+       url: 'user/shipping-address/update',
+       data: {
+         token: str,
+         id: num,
+       }
+     })
+  }
+  //添加订单页面数据 
+   list_order(str,num) {
+     return _http.request({
+       type: 'post',
+       url: 'order/create',
+       data: {
+         token: str,
+         goodsJsonStr: num,
+       }
+     })
+   }
+   //  点击尺寸时 需要请求的数据接口
+   change_sizea(obj) {
+     return _http.request({
+       type: 'post',
+       url: 'shop/goods/price',
+       data: {
+        goodsId: obj.goodsId,
+        propertyChildIds: obj.propertyChildIds,
+       }
+     })
+  }
+  
+   //  点击颜色时 需要请求的数据接口
+   change_colora(obj) {
+     return _http.request({
+       type: 'post',
+       url: 'shop/goods/price',
+       data: {
+         goodsId: obj.goodsId,
+         propertyChildIds: obj.propertyChildIds+","+obj.id,
+       }
+     })
+  }
+  //  订单列表数据接口
+  list_order_list(obj) {
+    return _http.request({
+      type: 'post',
+      url: 'order/list',
+      data: {
+       token: obj,
+       }
+    })
+  }
+  //默认收货地址
+  order_aaa(obj) {
+    return _http.request({
+      type: 'post',
+      url: 'user/shipping-address/default',
+      data: {
+        token: obj
+      }
+    })
+  }
+  //订单的详情数据
+order_deta(obj,str) {
+  return _http.request({
+    type: 'post',
+    url: 'order/detail',
+    data: {
+      token: obj,
+      id:str
+    }
+  })
+}
 }
 
 export default Product

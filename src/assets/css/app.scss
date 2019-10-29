@@ -18,6 +18,13 @@
 @import "user/register";
 @import "user/updeta_pass";
 @import "car/footer_car";
+@import "car/car";
+@import "car/address";
+@import "car/address_create";
+@import "car/order";
+@import "car/order_ok";
+@import "car/order_yes";
+@import "car/order_detail";
 
 *{
   padding: 0;margin: 0;list-style: none;

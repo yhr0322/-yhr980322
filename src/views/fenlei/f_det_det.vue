@@ -14,26 +14,25 @@
    <p class="fdd_name">{{f_det_det.basicInfo.characteristic}}</p>
    <div  class="fdd_price">
    <p>
-   <span class="fdd_minprice">底价：￥{{f_det_det.basicInfo.minPrice}}.00</span>&nbsp;&nbsp;&nbsp;
-   <span class="fdd_originalPrice">原价：￥{{f_det_det.basicInfo.originalPrice}}.00</span>
+   <span class="fdd_minprice">底价：￥{{f_det_det.basicInfo.minPrice}}</span>&nbsp;&nbsp;&nbsp;
+   <span class="fdd_originalPrice">原价：￥{{f_det_det.basicInfo.originalPrice}}</span>
    </p>
    <p>库存：{{f_det_det.basicInfo.stores}}</p>
    </div>
    </div>
 <div id="fdd_content" v-html="f_det_det.content"></div>
-   
-   <footer_car></footer_car>
-  
+   <Footercar></Footercar>
   </div>
 </template>
 <script>
+import Footercar from "../../components/shouye/footercar.vue"
 import Product from '../../services/services'
 const _product = new Product()
-import footer_car from "../../components/shouye/footer_car.vue"
+
 export default {
   name: 'f_det_det',
   components:{
-footer_car
+Footercar
   },
   data() {
     return {
@@ -50,8 +49,9 @@ footer_car
     let id=this.$route.params.id
     _product.f_det_det(id).then(res => {
       this.f_det_det = res.data.data
-      console.log(this.f_det_det)
+     
       this.$store.state.f_det_det_str=this.f_det_det
+       console.log(this.$store.state.f_det_det_str)
      })
      
   }

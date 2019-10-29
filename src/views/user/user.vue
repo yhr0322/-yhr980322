@@ -14,12 +14,12 @@
       <van-icon name="volume-o" />
       <span>新上线更稳定的付费快递查询接口</span>
      </div>
-     <div class="user_order"> 
+     <div class="user_order" > 
      <p class="u_my_order">
      <van-icon name="records" />
      <span>我的订单</span>
      </p>
-     <van-icon name="arrow" />
+     <router-link to="/order_ok" tag="i"><van-icon name="arrow" /></router-link>
      </div>
     <div class="user_nav">
     <ul>
@@ -35,7 +35,7 @@
     <li><van-icon name="edit" />我的砍价</li>
     <li><van-icon name="coupon-o" />我的礼券</li>
     <li><van-icon name="star-o" />我的收藏</li>
-    <li><van-icon name="location-o" />联系地址</li>
+    <router-link tag="li" to="/addressa"><van-icon name="location-o" />联系地址</router-link>
     <li><van-icon name="service-o" />联系客服</li>
     </ul>
      
