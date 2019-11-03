@@ -11,9 +11,9 @@
    <p class="kanjia_title">{{item.name}}</p>
    <p class="kanjia_content">{{item.characteristic}}</p> 
    <div class="kanjia_r_bottom">
-   <p>{{item.minPrice}} <br> 低价</p>
-   <p>{{item.originalPrice}} <br> 原价</p>
-   <p>{{item.stores}} <br> 限量</p>
+   <p> <span style="color:red;">￥ {{item.minPrice}}</span><br> 低价</p>
+   <p>￥{{item.originalPrice}} <br> 原价</p>
+   <p>￥{{item.stores}} <br> 限量</p>
    </div>
    </div>
    

@@ -1,0 +1,85 @@
+.kankan_all{
+  width: 7.5rem;background: white;
+  .kankan_top{
+    width: 7.5rem;
+    height: 8.35rem;
+    background: #ccbb99;
+    text-align: center;
+    i{
+      font-size: 1.2rem;border-radius: 0.6rem;text-align: center;width: 1.2rem;height: 1.2rem;
+      background: #f4f4f4;overflow: hidden;margin-top: 0.7rem;
+    }
+    .kankan_str{
+      font-size: 0.22rem;color:white;margin: 0.15rem auto;
+    }
+    .kan_shop{
+      width: 6.6rem;
+      height: 1.85rem;display: flex;justify-content: space-around;
+      align-items: center;
+      background: #f6edde;border-radius: 0.1rem;margin: 0 auto;
+      img{
+        width: 1.6rem;height: 1.6rem;border-radius: 0.1rem;
+      }
+      div{
+        width: 4.6rem;height: 1.6rem;
+        h4{
+          font-size: 0.25rem;color: black;margin-top: 0.3rem;text-align: left;
+        }
+        p{
+          width: 3rem;font-size: 0.2rem;margin-top: 0.5rem;
+          display: flex;justify-content: space-between;margin-left:0.5rem;
+          span{
+            display: inline-block;color: gray;
+          }
+        }
+      }
+    }
+    .kankan_price{
+        font-size: 0.22rem;
+        color:white;
+        margin: 0.3rem auto;
+        margin-bottom: 0rem;
+        span{
+          font-size: 0.35rem;
+        }
+    }
+    .kankan_but{
+      width: 3.1rem;height: 0.9rem;border-radius: 0.1rem;line-height: 0.9rem;
+      text-align: center;font-size: 0.3rem;font-weight: 800;color: white;
+      background: #b0a48c;
+    }
+    .kankan_butt{
+       width: 2.1rem;
+       height: 0.9rem;
+       border-radius: 0.1rem;
+       line-height: 0.9rem;
+       text-align: center;
+       font-size: 0.3rem;
+       font-weight: 800;
+       color: white;
+       background: #ccbb99;
+    }
+    .van-count-down {
+      margin-top: 0.2rem;margin-left:0.5rem;
+      span{
+        width: 0.55rem;height: 0.55rem;border-radius: 0.05rem;line-height: 0.55rem;text-align: center;
+        background: #b0a48c;color: white;margin-left: -1rem;
+        font-size:0.15rem;font-weight: 400;display: inline-block;
+      }
+    }
+    .kankan_i{
+      width: 0.65rem;height: 0.65rem;border-radius: 0.33rem;background: white;line-height: 0.75rem;
+      text-align: center;position: fixed;top: 0.3rem;left: 0.3rem;
+      i{
+        font-size: 0.4rem;font-weight: 900;width: 0.4rem;height: 0.4rem;margin: 0;background: white;
+        line-height:0.4rem ;text-align: center;color: gray;
+      }
+    }
+  }
+}
+.kanjia_yi{
+  width: 6rem;height: 0.6rem;font-size: 0.3rem;border: 0.01rem solid gray;
+  line-height: 0.6rem;text-align: center;display: block;margin-top: 0.2rem;
+  margin-left: 0.75rem;font-weight: 700;color: white;
+  border-radius: 0.15rem;
+}

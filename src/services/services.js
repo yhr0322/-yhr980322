@@ -12,12 +12,13 @@ class Product {
       url: 'cms/news/list'
     })
   }
-   bbbb_list() {
-     return _http.request({
-        type: 'post',
-       url: 'shop/goods/category/all'
-     })
-   }
+  ///分类页面的全部数据
+  //  bbbb_list() {
+  //    return _http.request({
+  //       type: 'post',
+  //      url: 'shop/goods/category/all'
+  //    })
+  //  }
   // detail方法
   kanjiadetail(productId) {
     return _http.request({
@@ -245,7 +246,56 @@ order_deta(obj,str) {
       id:str
     }
   })
-}
+  }
+   //发起砍价得axios请求
+   kankan_shop(obj, str) {
+     return _http.request({
+       type: 'post',
+       url: 'shop/goods/kanjia/join',
+       data: {
+         kjid: obj,
+         token: str,
+         
+       }
+     })
+  }
+  //砍一刀
+  kankan_shopa( str) {
+    return _http.request({
+      type: 'post',
+      url: 'shop/goods/kanjia/help',
+      data: {
+       
+        token: str.token,
+        kjid: str.kjid,
+        joinerUser:str.joinerUser
+
+      }
+    })
+  }
+   //发起砍价得axios请求
+   change_falsea(obj) {
+     return _http.request({
+       type: 'post',
+       url: 'shop/goods/reputation',
+       data: {
+        goodsId: obj,
+      
+
+       }
+     })
+  }
+  //发起评价
+  lis(obj) {
+    return _http.request({
+      type: 'post',
+      url: 'order/reputation',
+      data: {
+        postJsonString:obj.dddd,
+        token:obj.token,
+      }
+    })
+  }
 }
 
 export default Product

@@ -14,19 +14,19 @@
    <div class="det_cont_left">
    <h4>{{item.goodsName}}</h4>
     <p>{{item.property}}</p>
-    <p>数量：{{item.number}}</p>
+    <p>数量：{{item.number}}
+    
+     
+     <span v-if="order_deta.orderInfo.status==3" @click="order_r_p(item,index)">去评价</span> 
+    
+      <span v-if="order_deta.orderInfo.status==-1">订单关闭</span> 
+     </p>
    </div>
+
    </li>
    
    </ul>
    </div>
-
-
-
-
-
-
-
 
 
    </div>
@@ -51,6 +51,13 @@ export default {
   computed: {
     order_deta(){
       return this.$store.state.order_deta
+    }
+  },
+  methods: {
+    order_r_p(item,index){
+     
+      
+      this.$router.push("/order_pj")
     }
   },
 } 

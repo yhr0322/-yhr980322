@@ -3,7 +3,7 @@
   <div class="bbbb_all">
   <div class="bbbb_left">
   <ul>
-  <li @click="filter_all">所有分类</li>
+  <li @click="filter_all" style="font-weight:100;">所有分类</li>
   <li v-for="(item,index) in bbbb_lista"><p @click="filter_list(item)">{{item.name}}</p> </li>
   </ul>
   </div>
@@ -32,6 +32,7 @@
   </div>
 </template>
 <script>
+import axios from "axios"
 import Product from '../../services/services'
 const _product = new Product()
 export default{
@@ -49,30 +50,46 @@ export default{
       return this.$store.state.bbbb_lista
     },
     bbbb_listb(){
-      return this.$store.state.bbbb_listb
+      return this.$store.getters.bbbb_listb
     }
   },
   methods: {
     filter_list(item){
       this.$store.commit("filter_list",item)
+      console.log(this.bbbb_listb)
+      
     },
     filter_all(){
        this.$store.commit("filter_all")
     }
   },
-  created () {
+  async created () {
+          let res =  await axios.post('https://api.it120.cc/small4/shop/goods/category/all')
+          this.$store.state.bbbb_list = res.data.data
+           this.$store.state.bbbb_listb=this.$store.state.bbbb_list
     // pending - 等待
-    _product.bbbb_list().then(res => {
-      this.$store.state.bbbb_list = res.data.data
-      this.$store.state.bbbb_listb=this.$store.state.bbbb_list
-})
-     this.$store.state.bbbb_lista =this.$store.state.bbbb_list.filter((item)=>{
+//     _product.bbbb_list().then(res => {
+//       this.$store.state.bbbb_list = res.data.data
+//       this.$store.state.bbbb_listb=this.$store.state.bbbb_list
+// })
+console.log( this.$store.state.bbbb_list)
+
+
+      this.$store.state.bbbb_lista =this.$store.state.bbbb_list.filter((item)=>{
         if(item.type.charAt(item.type.length-1)!=2){
+          console.log(item.name)
       return item
-        
         }
       })
-  }
+  },
+//   beforeMount(){
+//  this.$store.state.bbbb_lista =this.$store.state.bbbb_list.filter((item)=>{
+//         if(item.type.charAt(item.type.length-1)!=2){
+//           console.log(item.name)
+//       return item
+//         }
+//       })
+//   }
 } 
 </script>
 <style>

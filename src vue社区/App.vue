@@ -46,6 +46,10 @@ export default {
               this.isLoading = false // 数据请求成功isloading改为false，loading隐藏掉
               return response;
           });
+          this.axios.interceptors.request.use((res)=>{
+       this.isLoading=true
+      return res
+    })
           
       }
 } 

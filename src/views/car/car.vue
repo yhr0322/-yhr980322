@@ -6,10 +6,11 @@
    <p>购物车</p>
     <p></p>
    </div>
-  
+     <img src="../../assets/img/shop.png" alt="" class="shopp_img" v-show="car_list.length==0">
    <div class="car_content">
-      <div class="car_list" v-for="(item,index) in car_list"> 
-      <input type="checkbox" v-model="item.checked" @change="change_statea">
+      <div class="car_list" v-for="(item,index) in car_list"  @touchstart="toucha($event)"  @touchend="touchb($event,index)"> 
+<div class="car_list_left">
+<van-checkbox v-model="item.checked" checked-color="#07c160" @change="change_statea"></van-checkbox>
       <img :src="item.f_det_det_str.basicInfo.pic" alt="">
       <div class="car_l_right">
       <h4>{{item.f_det_det_str.basicInfo.name}}</h4>
@@ -25,12 +26,19 @@
 <button @click="add_jiaa(item,index)">+</button></p>
       </div>
       </div>
+</div>
+<p class="car_list_right" @click="delete_ca(index)">
+删除
+
+</p>
+      
       </div>
    </div>
    </div>
-   <div class="footer_car_foot">
+   <div class="footer_car_foot" v-show="car_list.length>0">
    <p>
-    <input type="checkbox" v-model="car_checked.car_all_check" @change="change_all">全选
+   <van-checkbox v-model="car_checked.car_all_check" checked-color="#07c160" @change="change_all"></van-checkbox>
+  
    </p>
   
    <div class="foot_car_right">
@@ -72,11 +80,45 @@ export default {
     }
   },
   methods: {
+    delete_ca(index){
+     
+       let div=document.getElementsByClassName("car_list_right")
+          let diva=document.getElementsByClassName("car_list_left")
+            diva[index].style.left="0rem"
+                div[index].style.right='-1.5rem'
+              div[index].style.transition="all 0s"
+           diva[index].style.transition="all 0s"
+     
+ this.$store.state.car_list.splice(index,1)
+    },
+     toucha($event){
+       this.start_x=$event.changedTouches[0].pageX
+       
+       },
+       touchb($event,index){
+   this.end_x=$event.changedTouches[0].pageX
+         let div=document.getElementsByClassName("car_list_right")
+          let diva=document.getElementsByClassName("car_list_left")
+         if(this.start_x-this.end_x>40){
+         diva[index].style.left="-1.5rem"
+         div[index].style.right='0rem'
+        div[index].style.transition="all 1s"
+           diva[index].style.transition="all 1s"
+           console.log("左滑")
+         }else if(this.start_x-this.end_x<-40){
+            diva[index].style.left="0rem"
+         div[index].style.right='-1.5rem'
+          div[index].style.transition="all 1s"
+           diva[index].style.transition="all 1s"
+           console.log("油滑")
+         }
+       },
     add_obj(){
      this.$store.commit("add_obj")
      if(this.car_all_price>0){
        if(this.$store.state.token!=''){
          this.$router.push('/order')
+         this.$store.state.order_allprice=this.$store.getters.car_all_price
        }else{
           this.$router.push('/login')
           alert("请先登录！！！")
@@ -89,6 +131,7 @@ export default {
     
     add_jiaa(item,index){
       item.car_num++
+      console.log(this.car_list)
     },
     change_statea(){
    this.$store.commit("change_statea")

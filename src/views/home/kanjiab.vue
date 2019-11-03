@@ -9,7 +9,7 @@
     </div>
    <ul>
    <router-link  v-for="(item,index) in kanjialist" :key="index" :to="'/kanjiadetail/'+item.id">
-   <li style="border-bottom:0.01rem solid black;">
+   <li style="border-bottom:0.01rem solid black;" @click="clickitem(item)">
    <img :src="item.pic" alt="">
    <div class="kanjiab_right">
    <p class="kanjiab_title">{{item.name}}</p>
@@ -36,6 +36,11 @@ export default {
       return this.$store.state.kanjialist
     },
     
+  },
+  methods: {
+    clickitem(item){
+     this.$store.state.kankanlis=item
+    }
   },
 } 
 </script>

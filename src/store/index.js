@@ -6,6 +6,7 @@ const store = new Vuex.Store({
   state: {
    // list: [],//首页轮播图数据
     kanjialist: [],//首页砍价商品的数据
+    kanjialista:[],//砍价商品得另一个数组
     scrolllist: [], //首页专题滑动商品的数据
     shop_list: [],//首页商品数据
     shopa_list: [], //首页商品数据中的四条
@@ -59,8 +60,23 @@ const store = new Vuex.Store({
     order_listnum_a: [],//订单列表数据
     order_state: [],//订单的返回的变更状态数组
     num_num: [],//订单详情id
+    order_id: '',//砍价详情id
+    order_ida: '', //砍价详情id真
+     kankanlis:[],//砍价发起页面得数据
+    value: {
+      input_value:'',//分类页input绑定数值
+    },
+    kankan_shop: [],//发起砍价后接受数据
+    kanjia_shopaa:[],//砍一刀得数组
+    order_statea: '',//具体到某一个订单时的状态
+    order_allprice:'',//订单总额
+  // bbbb:{},//评价时上一个页面传递得参数
   },
   mutations: {
+    ///点击待付款时的订单
+    // jump_no (state, str) {
+     
+    // },
     //点击下单时  生成的数据 以及。。。。
     add_obj (state) {
       state.order_listaaaa = state.car_list.filter((item) => {
@@ -68,28 +84,60 @@ const store = new Vuex.Store({
       })
         
     },
-     //点击添加购物车数据是事件
+    //立即下单时，做的添加
+    add_order (state, f_det_det_str) {
+      state.order_listaaaa=[]
+      state.order_listaaaa.push({
+
+        color_id: state.color_id,
+          size_id: state.size_id,
+          checked: true,
+          size: state.size,
+          color: state.color,
+          car_num: state.car_num,
+          propertyChildIds: state.propertyChildIds,
+          f_det_det_str: f_det_det_str
+      })
+       state.order_allprice = 0,
+         state.order_listaaaa.map((item) => {
+          
+             state.order_allprice += Number(item.car_num) * Number(item.f_det_det_str.basicInfo.minPrice)
+          
+         })
+      
+    },
+    //点击添加购物车数据是事件
      add_car(state, f_det_det_str) {
-        console.log(f_det_det_str)
+       
        let indexa = state.car_list.findIndex((item) => {
+           console.log(item.size_id,state.size_id)
          return item.size_id==state.size_id
        })
        let indexb = state.car_list.findIndex((item) => {
+          console.log(item.size_id, state.size_id)
          return item.color_id == state.color_id
        })
+       let obja={
+         color_id: state.color_id,
+         size_id: state.size_id,
+         checked: true,
+         size: state.size,
+         color: state.color,
+         car_num: state.car_num,
+         propertyChildIds: state.propertyChildIds,
+         f_det_det_str: f_det_det_str
+       }
+    console.log(indexa,indexb)
       if (indexa == -1 || indexb == -1) {
-         state.car_list.push({
-           checked: true,
-           size: state.size,
-           color: state.color,
-           car_num: state.car_num,
-           propertyChildIds: state.propertyChildIds,
-           f_det_det_str: f_det_det_str
-         })
+        state.car_list.push(obja)
+      
       } else {
-        state.car_num+=state.car_num
-      }
 
+        state.car_list[indexa].car_num += obja.car_num
+       }
+       state.car_num=1
+    console.log(state.car_list)
+ 
       let objb = {
         goodsId: f_det_det_str.basicInfo.id,
         logisticsType: 0,
@@ -101,7 +149,7 @@ const store = new Vuex.Store({
       state.car_listaaa=state.car_listaaa.map((item, index) => {
          return item
        })
-      console.log(state.car_listaaa)
+    
 
     },
     //地址的默认选中状态改变
@@ -175,6 +223,13 @@ state.login_phone=phone
         })
       return state.car_all_num
     },
+    bbbb_listb (state) {
+       console.log(state.value.input_value)
+      return state.bbbb_listb.filter((item) => {
+        return item.name.includes(state.value.input_value)
+      })
+     
+    }
   }
 })
 const app = new Vue({
@@ -184,7 +239,9 @@ const app = new Vue({
     //首页砍价的商品数据请求
      axios.get("https://api.it120.cc/small4/shop/goods/kanjia/list").then((res) => {
        store.state.kanjialist = res.data.data.goodsMap
-       console.log(store.state.kanjialist)
+       store.state.kanjialista = res.data.data.result
+        console.log(res)
+      
       })
     //首页专题滑动商品的数据
      axios.get("https://api.it120.cc/small4/cms/news/list").then((res) => {
@@ -195,6 +252,7 @@ const app = new Vue({
     //首页下方商品列表的数据
      axios.get("https://api.it120.cc/small4/shop/goods/list").then((res) => {
        store.state.shop_list = res.data.data
+      
        store.state.shopa_list = store.state.shop_list.splice(0, 4)
      })
    

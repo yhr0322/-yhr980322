@@ -23,7 +23,7 @@
      </div>
     <div class="user_nav">
     <ul>
-    <li><van-icon name="pending-payment" />待付款</li>
+    <li><van-icon name="pending-payment" @click="jump_no('待付款')" />待付款</li>
     <li><van-icon name="send-gift-o" />待发货</li>
     <li><van-icon name="logistics" />待收货</li>
     <li><van-icon name="comment-o" />待评价</li>
@@ -65,11 +65,18 @@ components:{
 this.login_phonea=this.$store.state.login_phone
     }
   },
-  // computed: {
-  //   login_phone(){
-  //     return this.$store.state.login_phone
-  //   }
-  // },
+ methods: {
+   jump_no(str){
+    //  this.$store.commit("jump_no",str)
+     this.$store.state.order_statea=str
+      if (this.$store.state.token == '') {
+        alert("请先登录！")
+       this.$router.push('/login')
+      } else {
+          this.$router.push("/incomplete")
+      }
+   }
+ },
 } 
 </script>
 <style>

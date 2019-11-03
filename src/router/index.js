@@ -7,6 +7,7 @@ import Order from '@/views/car/order'
 import Order_ok from '@/views/car/order_ok'
 import Order_yes from '@/views/car/order_yes'
 import Order_detail from '@/views/car/order_detail'
+import Order_pj from '@/views/car/order_pj'
 
 
 import Home from '@/views/home/home'
@@ -17,6 +18,7 @@ import Special_det from '@/views/home/special_det'
 import Special from '@/views/home/Special'
 import Signin from "@/views/home/signin"
 import Shopp from "@/views/home/shopp"
+import Kanjia_kanjia from "@/views/home/kanjia_kanjia"
 
 
 import Fen from '@/views/fenlei/fen'
@@ -31,6 +33,7 @@ import Update_pass from '@/views/user/update_pass'
 import Addressa from '@/views/user/addressa'
 import Address_create from '@/views/user/address_create'
 import Address_det_up from '@/views/user/address_det_up'
+import Incomplete from '@/views/user/incomplete'
 Vue.use(Router)
 
 export default new Router({
@@ -40,6 +43,21 @@ export default new Router({
       path: '/',
      
       component: Home
+    },
+    {
+      path: '/order_pj',
+
+      component: Order_pj
+    },
+    {
+      path: '/incomplete',
+
+      component: Incomplete
+    },
+    {
+      path: '/kanjia_kanjia',
+
+      component: Kanjia_kanjia
     },
      {
        path: '/order_detail',
@@ -54,7 +72,10 @@ export default new Router({
     {
       path: '/order_ok',
 
-      component: Order_ok
+      component: Order_ok,
+      meta: {
+        keepAlive:true
+      }
     },
     {
       path: '/order_yes',
@@ -70,6 +91,10 @@ export default new Router({
        path: '/addressa',
 
        component: Addressa
+       ,
+       meta: {
+         keepAlive: true
+       }
     },
      {
        path: '/address_create',
@@ -140,6 +165,10 @@ export default new Router({
       path: '/fen',
 
       component: Fen
+      ,
+      meta: {
+        keepAlive: true
+      }
     },
     {
       path: '/user',
@@ -150,6 +179,10 @@ export default new Router({
       path: '/car',
 
       component: Car
+      ,
+      meta: {
+        keepAlive: true
+      }
     },
       
   ]

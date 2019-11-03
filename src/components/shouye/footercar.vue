@@ -16,22 +16,20 @@
 <p>{{f_det_det_str.basicInfo.name}}</p>
 <span>￥{{f_det_det_str.basicInfo.minPrice}}</span>
 </div>
-
 </div>
 <div class="det_center" >
 <p>{{f_det_det_str.properties[0].name}}</p>
 <div class="det_but">
 <ul>
-<li v-for="(itema,indexa) in f_det_det_str.properties[0].childsCurGoods" @click="add_size(itema)">{{itema.name}}</li>
+<li v-bind:class="{'class_color':showcolor===indexa}" v-for="(itema,indexa) in f_det_det_str.properties[0].childsCurGoods" @click="add_size(itema,indexa)">{{itema.name}}</li>
 </ul>
 </div>
 </div>
-
 <div class="det_center" v-if="f_det_det_str.properties[1]">
 <p>{{f_det_det_str.properties[1].name}}</p>
 <div class="det_but">
 <ul>
-<li v-for="(itema,indexa) in f_det_det_str.properties[1].childsCurGoods" @click="add_color(itema)" >{{itema.name}}</li>
+<li :class="{'class_colora':showcolora===indexa}" v-for="(itema,indexa) in f_det_det_str.properties[1].childsCurGoods" @click="add_color(itema,indexa)" >{{itema.name}}</li>
 </ul>
 </div>
 </div>
@@ -47,7 +45,7 @@
 </div>
 <div class="footer_but">
   <el-button :plain="true" v-show="show_but" @click="add_car(f_det_det_str)">加入购物车</el-button>
-<button v-show="!show_but">立即购买</button>
+<button v-show="!show_but" @click="add_order(f_det_det_str)">立即购买</button>
 </div>
 <van-icon name="close" @click="change_showc" />
 </div>
@@ -64,7 +62,9 @@ export default{
     return {
       change_show:true,
       show_but:true,
-      id:''
+      id:'',
+      showcolor:'',
+       showcolora:''
     }
   },
    computed: {
@@ -79,6 +79,19 @@ export default{
     },
   }, 
   methods: {
+    //立即下单做添加数据
+    add_order(f_det_det_str){
+   this.$store.commit("add_order",f_det_det_str)
+   
+         if (this.$store.state.token != '') {
+           this.$router.push('/order')
+         } else {
+           this.$router.push('/login')
+           alert("请先登录！！！")
+         }
+
+    },
+
     //改变购物车弹出框的显示隐藏
     change_showa(){
       this.change_show=false
@@ -102,7 +115,9 @@ export default{
     this.$store.commit("foot_jian")
   },
   //点击商品尺寸进行赋值
-  add_size(item){
+  add_size(item,indexa){
+     this.showcolor=indexa
+     console.log(this.showcolor)
      this.$store.state.size_id=item.id
      this.$store.state.size=item.name
       _product.list().then(res => {
@@ -120,7 +135,8 @@ export default{
     })
   },
   //点击商品颜色进行赋值
-  add_color(item){
+  add_color(item,indexa){
+    this.showcolora=indexa
    this.$store.state.color_id=item.id
    this.$store.state.color=item.name
      let obj={

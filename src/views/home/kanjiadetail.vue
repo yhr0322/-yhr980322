@@ -49,15 +49,11 @@ footer_kan
   created () {
     // pending - 等待
     let id=this.$route.params.id
+    this.$store.state.order_id=this.$route.params.id
        console.log(id)
     _product.f_det_det(id).then(res => {
       this.f_det_det = res.data.data
       console.log(this.f_det_det)
-    // this.f_det_list.filter((item)=>{
-    //   if(item.categoryId==id){
-    //     this.f_det_lista.push(item)
-    //   }
-    // })
      })
        console.log( this.f_det_lista)
   }

@@ -2,20 +2,24 @@
  .car_all{
    padding-top:0.95rem ;
  }
+ .shopp_img{
+   width: 4rem;height: 4rem;position: fixed;top: 3rem;left:1.75rem;
+
+ }
  .car_top {
    display: flex;
    justify-content: space-around;
    align-items: center;
    width: 7.5rem;
    height: 0.95rem;
-   border-bottom: 0.02rem solid gray;
+   border-bottom: 0.05rem solid #f4f4f4;
    position: fixed;
    background: white;
    top: 0;
  }
  p {
    font-size: 0.4rem;
-   font-weight: bolder;
+   font-weight: 500;
    color: black;
  }
  .p1{
@@ -26,12 +30,20 @@ color: black;
  .car_content{
    width: 7.5rem;background: white;
   .car_list{
-    width: 100%;height: 2.3rem;border-bottom: 0.01rem solid gray;
-    display: flex;justify-content: space-around;align-items: center;
-    input{
-      width: 0.45rem;height: 0.45rem;background: red;border-radius: 0.22rem;
-      font-weight: 200;
-    }
+    width: 100%;
+      height: 2.3rem;border-bottom: 0.02rem solid #f4f4f4;
+      position: relative;overflow: hidden;
+      .car_list_left{
+      width: 100%;
+      height: 2.3rem;
+      position: absolute;
+      top: 0;left: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+    
+    
     img{
       width: 1.55rem;height: 1.55rem;border-radius: 0.05rem;
     }
@@ -42,7 +54,7 @@ color: black;
         margin: 0.2rem 0;
       }
       p{
-         font-size: 0.23rem;color: gray;margin-bottom: 0.2rem;
+         font-size: 0.18rem;color: gray;margin-bottom: 0.2rem;
       }
       .car_l_but{
         width: 100%;display: flex;justify-content: space-between;
@@ -54,8 +66,10 @@ color: black;
             width: 0.5rem;height: 0.5rem;
             font-weight:900;
             line-height: 0.5rem;
+            border-radius: 0.25rem;
+            background: white;
             text-align: center;
-            font-size: 0.25rem;border:0.01rem solid gray;
+            font-size: 0.25rem;border:0.05rem solid #f4f4f4;
           }
           span{
              width: 0.5rem;
@@ -68,9 +82,15 @@ color: black;
       }
     }
   }
+  .car_list_right{
+    width: 1.5rem;height: 2.3rem;background: red;color: white;
+    line-height: 2.3rem;text-align: center;position: absolute;top: 0;
+    right: -1.5rem;transition: all 1s;
+  }
+  }
  }
 .footer_car_foot{
-  width: 7.5rem;height: 1rem;border-top:0.01rem solid black;
+  width: 7.5rem;height: 1rem;border-top:0.03rem solid #f4f4f4;
   display: flex;justify-content: space-between;align-items: center;
   font-size:0.2rem;position:fixed;bottom:1rem;background: white;
   border-bottom: 0.01rem solid gray;
@@ -79,12 +99,8 @@ color: black;
     font-weight: 200;
     display: flex;
     align-items:center;
-    input{
-     width: 0.45rem;
-     height: 0.45rem;
-     background: red;
-     border-radius: 0.22rem;
-     font-weight: 200;
+    i{
+   
      margin-left: 0.12rem;
   }
   }
@@ -96,7 +112,7 @@ color: black;
     }
     button{
       width: 2.4rem;height: 0.99rem;line-height: 0.99rem;
-      text-align: center;font-size: 0.5rem;color: white;
+      text-align: center;font-size: 0.35rem;color: white;
       background: red;margin-left: 0.1rem;border: none;
     }
   }

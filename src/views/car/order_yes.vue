@@ -9,18 +9,18 @@
 <div class="order_c_top">
 <van-icon name="gold-coin-o" />
 <div>
-<h4>商品总额：￥{{car_all_price}}</h4>
+<h4>商品总额：￥{{order_allprice}}</h4>
 <p>订单号：{{order_num}}</p>
 </div>
 </div>
 <div class="order_c_top">
 <van-icon name="location-o" style="color:blue;" />
-<div v-for="(item,index) in address_def.address_def">
-<h4>{{item.linkMan}} {{item.mobile}}</h4>
-<p>{{item.address}}</p>
+<div>
+<h4>{{address_def.address_def.linkMan}} {{address_def.address_def.mobile}}</h4>
+<p>{{address_def.address_def.address}}</p>
 </div>
 </div>
-<button @click="al_pr">微信支付 ￥{{car_all_price}}</button>
+<button @click="al_pr">微信支付 ￥{{order_allprice}}</button>
 
     
     </div>
@@ -41,13 +41,13 @@ export default {
 
   },
   computed: {
-    car_all_price(){
-      return this.$store.getters.car_all_price
+    order_allprice(){
+      return this.$store.state.order_allprice
     },
     order_num(){
       return this.$store.state.order_num
     },
-    address_def(){
+     address_def(){
       return this.$store.state.address_defa
     }
   },

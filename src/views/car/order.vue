@@ -42,10 +42,10 @@
    </div>
    <div class="order_price">
    <p>商品金额</p>
-   <p>￥{{car_all_price}}</p>
+   <p>￥{{order_allprice}}</p>
    </div>
    <div class="order_order">
-   <span>合计：{{car_all_price}}</span>
+   <span>合计：{{order_allprice}}</span>
    <router-link to="/order_yes"><button @click="create_order">提交订单</button></router-link>
    </div>
 
@@ -69,7 +69,6 @@ export default {
   },
   data() {
     return {
-     
     }
   },
   methods: {
@@ -78,7 +77,7 @@ let token=this.$store.state.token
     let id=JSON.stringify(this.$store.state.car_listaaa)
        _product.list_order(token,id).then(res => {
    this.$store.state.order_num = res.data.data.orderNumber
-     console.log(res)
+     console.log(res.data.data.orderNumber)
     })
     }
   },
@@ -86,8 +85,8 @@ let token=this.$store.state.token
     order_listaaaa(){
       return this.$store.state.order_listaaaa
     },
-    car_all_price(){
-      return this.$store.getters.car_all_price
+    order_allprice(){
+      return this.$store.state.order_allprice
     },
     address_def(){
       return this.$store.state.address_defa

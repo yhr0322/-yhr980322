@@ -62,9 +62,6 @@ export default {
     axios.post("https://api.it120.cc/common/region/province").then((res)=>{
       this.address_list=res.data.data
     })
-
-
-  
   },
   methods: {
     delete_add(){

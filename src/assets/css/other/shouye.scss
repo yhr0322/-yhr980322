@@ -72,8 +72,8 @@ body {
       height: 2.55rem;
       display: flex;
       justify-content: space-around;
-      align-items: center;
-      border-bottom: 0.02rem black gray;
+      align-items: center;color:gray;
+      border-bottom:0.05rem black #f4f4f4;
 
       img {
         width: 2.25rem;
@@ -87,11 +87,13 @@ body {
 
         .kanjia_title {
           font-size: 0.25rem;
+          color:gray;
           margin-bottom: 0.2rem;
         }
 
         .kanjia_content {
           font-size: 0.16rem;
+          color:gray;
           margin-bottom: 0.7rem;
         }
 
@@ -102,6 +104,7 @@ body {
 
           p {
             font-size: 0.25rem;
+            color:gray;
           }
         }
       }
